@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block b1 %}
+<h1>Login</h1>
+<form method="post" action="../login/">
+    {% csrf_token %}
+    <p>Email :<input type="text" name="T1"/></p>
+    <p>Password :<input type="text" name="T2"/></p>
+    <input type="submit" name="B1" value="Login"/>
+</form>
+{% if msg %}
+    <h2>{{msg}}</h2>
+{% endif %}
+{% endblock %}

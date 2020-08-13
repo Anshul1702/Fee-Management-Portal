@@ -1,0 +1,9 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block b1 %}<h1>Photo Upload</h1>
+<form method="post" action="../uploadphotoadmin/" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>Photo <input type="file" name="F1" /></p>
+    <p><input type="submit" name="B1" value="Upload" /></p>
+</form>
+{% endblock %}
